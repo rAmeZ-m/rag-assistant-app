@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Secrets and logs
+.env
+*.log
+
+# Raw document corpus (re-download with download_data.py and download_extra.py)
+data/raw/
+
+# Editor / OS
+.vscode/
+.DS_Store
+
+# Vector store: uncomment ONLY if it is larger than 50 MB
+backend/data/vector_store/

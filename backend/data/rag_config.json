@@ -1,0 +1,12 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "collection_name": "papers",
+  "distance": "cosine",
+  "chunk_size": 1000,
+  "chunk_overlap": 200,
+  "top_k": 6,
+  "similarity_threshold": 0.45,
+  "llm_model": "llama3.2:3b",
+  "num_ctx": 4096,
+  "num_chunks": 3535
+}
