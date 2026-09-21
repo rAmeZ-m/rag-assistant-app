@@ -103,7 +103,7 @@ rag-assistant-app/
 - **Extraction:** all PDFs are text-extractable, no OCR was needed.
 - **Cleaning:** ligatures normalized (NFKC), hyphenated line breaks rejoined, broken lines merged, repeated page headers and footers removed.
 - **Reference sections removed:** bibliographies and author lists matched many question words and crowded out real content, so chunks that look like references are dropped before embedding.
-- **Chunks:** 4017 chunks after splitting, 3535 stored after removing references (1000 characters, 200 overlap, split per page so every chunk keeps `source` and `page`).
+- **Chunks:** 4017 chunks after splitting, around 3535 stored after removing references (1000 characters, 200 overlap, split per page so every chunk keeps `source` and `page`).
 
 The paper set may differ slightly if you re-run the download, because arXiv search results change over time. `titles.json` covers the original 32 papers; a paper without a title is shown by its file name.
 
@@ -150,7 +150,7 @@ cd backend
 uvicorn app.main:app --reload
 ```
 
-Open <http://localhost:8000/docs> to try the API. `GET /health` should report 3535 chunks.
+Open <http://localhost:8000/docs> to try the API. `GET /health` should report around 3535 chunks.
 
 ### 5. Run the frontend
 
@@ -210,7 +210,7 @@ Frontend (`frontend/.env`, see `frontend/.env.example`):
 ### `GET /health`
 
 ```json
-{"status": "ok", "chunks": 3535, "llm_model": "llama3.2:3b"}
+{"status": "ok", "chunks": around 3535, "llm_model": "llama3.2:3b"}
 ```
 
 ### `POST /query`
